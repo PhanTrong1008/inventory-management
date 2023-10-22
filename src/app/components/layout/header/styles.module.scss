@@ -1,0 +1,17 @@
+.header {
+  padding: 0;
+
+  .buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    .collapseButton {
+      width: 64;
+      height: 64;
+      font-size: 16px;
+    }
+  }
+}

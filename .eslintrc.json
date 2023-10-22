@@ -1,3 +1,25 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "root": true,
+  "ignorePatterns": ["projects/**/*", "build/**", "dist/**"],
+  "overrides": [
+    {
+      "env": {
+        "browser": true,
+        "node": true
+      },
+      "files": ["*.ts"],
+      "excludedFiles": ["*.js"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "plugins": ["@jobframe"],
+      "extends": ["plugin:@jobframe/angular"],
+      "rules": {
+        "no-underscore-dangle": "off"
+      }
+    }
+  ]
 }
